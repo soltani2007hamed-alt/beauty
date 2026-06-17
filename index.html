@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LUMÉRA - Premium luxury skincare and beauty essentials. Reveal your natural beauty with our exquisite collection of high-end cosmetics and skincare.">
+    <meta name="keywords" content="luxury skincare, premium cosmetics, high-end beauty, natural beauty, LUMÉRA, skincare, makeup, fragrance">
+    <meta name="author" content="LUMÉRA">
+    <title>LUMÉRA • Luxury Beauty</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ==================== LOADING SCREEN ==================== -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="luxury-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h1 class="logo-text">LUMÉRA</h1>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Crafting your beauty ritual...</p>
+        </div>
+    </div>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <div class="logo-wrapper">
+                    <i class="fas fa-gem logo-icon"></i>
+                    <span class="logo-text">LUMÉRA</span>
+                </div>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#shop" class="nav-link">Shop</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#bestsellers" class="nav-link">Best Sellers</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <!-- Nav Actions -->
+            <div class="nav-actions">
+                <!-- Search -->
+                <button class="nav-btn search-btn" id="search-btn" aria-label="Search products">
+                    <i class="fas fa-search"></i>
+                </button>
+
+                <!-- Wishlist -->
+                <button class="nav-btn wishlist-btn" id="wishlist-btn" aria-label="Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="wishlist-count" id="wishlist-count">0</span>
+                </button>
+
+                <!-- Cart -->
+                <button class="nav-btn cart-btn" id="cart-btn" aria-label="Shopping cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+
+                <!-- Mobile Hamburger -->
+                <button class="nav-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="search-overlay">
+            <div class="search-container">
+                <div class="search-header">
+                    <input type="text" id="search-input" placeholder="Search luxury products..." autocomplete="off">
+                    <button class="search-close" id="search-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="search-results" id="search-results"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span>Est. 2017 • Paris</span>
+                </div>
+                <h1 class="hero-title">Reveal Your<br>Natural Beauty</h1>
+                <p class="hero-subtitle">
+                    Discover premium skincare and beauty essentials crafted to elevate your daily ritual.
+                </p>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('shop').scrollIntoView({ behavior: 'smooth' })">
+                        Shop Now
+                    </button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('categories').scrollIntoView({ behavior: 'smooth' })">
+                        Explore Collection
+                    </button>
+                </div>
+                
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Free shipping over $150</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>30-day returns</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Product Cards -->
+        <div class="floating-products">
+            <div class="floating-card card-1">
+                <img src="https://picsum.photos/id/1005/300/300" alt="Radiance Serum">
+            </div>
+            <div class="floating-card card-2">
+                <img src="https://picsum.photos/id/201/300/300" alt="Velvet Foundation">
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURED CATEGORIES ==================== -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Discover</span>
+                <h2 class="section-title">Curated Collections</h2>
+                <p class="section-subtitle">Thoughtfully crafted for the modern woman who values quality and elegance.</p>
+            </div>
+
+            <div class="categories-grid">
+                <!-- Category Cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PRODUCT SHOWCASE ==================== -->
+    <section id="shop" class="shop">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Collection</span>
+                <h2 class="section-title">Signature Products</h2>
+            </div>
+
+            <!-- Filters -->
+            <div class="shop-filters">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="Skincare">Skincare</button>
+                    <button class="filter-btn" data-filter="Makeup">Makeup</button>
+                    <button class="filter-btn" data-filter="Hair Care">Hair Care</button>
+                    <button class="filter-btn" data-filter="Fragrance">Fragrance</button>
+                </div>
+                
+                <div class="sort-select">
+                    <select id="sort-select">
+                        <option value="default">Sort by: Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="products-grid">
+                <!-- Products populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BEST SELLERS ==================== -->
+    <section id="bestsellers" class="bestsellers">
+        <div class="container">
+            <div class="bestsellers-content">
+                <div class="bestsellers-text">
+                    <span class="section-label gold">Bestsellers</span>
+                    <h2 class="section-title">Our Most Loved</h2>
+                    <p class="section-subtitle">Timeless formulas that have become cult favorites among beauty connoisseurs worldwide.</p>
+                    
+                    <div class="bestsellers-stats">
+                        <div class="stat">
+                            <span class="stat-number">98k+</span>
+                            <span class="stat-label">Products Sold</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4.98</span>
+                            <span class="stat-label">Average Rating</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bestsellers-product">
+                    <div class="product-spotlight">
+                        <div class="spotlight-badge">Best Seller</div>
+                        <img src="https://picsum.photos/id/160/500/600" alt="Radiance Serum" class="spotlight-image">
+                        <div class="spotlight-info">
+                            <h3>Radiance Vitamin C Serum</h3>
+                            <div class="spotlight-meta">
+                                <span class="price">$185</span>
+                                <div class="rating">
+                                    <div class="stars">★★★★★</div>
+                                    <span>(2.4k)</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" onclick="addToCart(1)">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROMOTIONAL BANNER ==================== -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="promo-content">
+                <div class="promo-badge">Limited Time</div>
+                <h2 class="promo-title">Luxury Beauty Week</h2>
+                <p class="promo-subtitle">Enjoy 25% off on our signature collection. Offer ends soon.</p>
+                
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">12</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">08</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">45</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                </div>
+                
+                <button class="btn btn-gold" onclick="document.getElementById('shop').scrollIntoView({ behavior: 'smooth' })">
+                    Shop the Sale
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Voices of Beauty</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+            </div>
+
+            <div class="testimonials-carousel">
+                <div class="testimonial-track" id="testimonial-track">
+                    <!-- Populated by JavaScript -->
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" id="prev-testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-dots" id="carousel-dots"></div>
+                    <button class="carousel-btn next" id="next-testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT BRAND ==================== -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-label">Our Story</span>
+                    <h2 class="section-title">The Art of Timeless Beauty</h2>
+                    <p class="about-text">
+                        Founded in Paris in 2017, LUMÉRA was born from a desire to create beauty products that honor both science and nature. 
+                        Each formula is meticulously crafted in small batches using the finest botanicals and cutting-edge skincare technology.
+                    </p>
+                    
+                    <div class="about-values">
+                        <div class="value-item">
+                            <i class="fas fa-leaf"></i>
+                            <div>
+                                <h4>Conscious Formulation</h4>
+                                <p>100% cruelty-free and sustainably sourced ingredients.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-flask"></i>
+                            <div>
+                                <h4>Scientific Excellence</h4>
+                                <p>Developed with dermatologists and leading cosmetic chemists.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="87">0</div>
+                        <div class="stat-label">Countries Served</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="124000">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="42">0</div>
+                        <div class="stat-label">Signature Products</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NEWSLETTER ==================== -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <span class="section-label">Stay Connected</span>
+                    <h2 class="section-title">Join the Inner Circle</h2>
+                    <p>Be the first to know about new launches, exclusive offers, and beauty rituals from our founders.</p>
+                </div>
+                
+                <form class="newsletter-form" id="newsletter-form">
+                    <div class="input-group">
+                        <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-gold">
+                            <span>Subscribe</span>
+                        </button>
+                    </div>
+                    <p class="form-note">We respect your inbox. Unsubscribe anytime.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INSTAGRAM GALLERY ==================== -->
+    <section class="instagram">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">@lumeraofficial</span>
+                <h2 class="section-title">Moments of Beauty</h2>
+            </div>
+            
+            <div class="instagram-grid">
+                <div class="insta-item"><img src="https://picsum.photos/id/1005/400/400" alt="LUMÉRA moment"><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="insta-item"><img src="https://picsum.photos/id/1011/400/400" alt="LUMÉRA moment"><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="insta-item"><img src="https://picsum.photos/id/160/400/400" alt="LUMÉRA moment"><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="insta-item"><img src="https://picsum.photos/id/201/400/400" alt="LUMÉRA moment"><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="insta-item"><img src="https://picsum.photos/id/251/400/400" alt="LUMÉRA moment"><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+                <div class="insta-item"><img src="https://picsum.photos/id/312/400/400" alt="LUMÉRA moment"><div class="insta-overlay"><i class="fab fa-instagram"></i></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-gem"></i>
+                        <span>LUMÉRA</span>
+                    </div>
+                    <p class="footer-description">Elevating everyday beauty into an art form since 2017.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Shop</h4>
+                    <a href="#shop">New Arrivals</a>
+                    <a href="#bestsellers">Best Sellers</a>
+                    <a href="#categories">Collections</a>
+                    <a href="#">Gift Sets</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Discover</h4>
+                    <a href="#about">Our Story</a>
+                    <a href="#">Sustainability</a>
+                    <a href="#">Journal</a>
+                    <a href="#">Store Locator</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="#">Shipping &amp; Returns</a>
+                    <a href="#">Care Guide</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">FAQ</a>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>hello@lumera.com</p>
+                    <p>+1 (310) 555-0187</p>
+                    <p>Paris • New York • Dubai</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 LUMÉRA. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== CART MODAL ==================== -->
+    <div class="modal-overlay" id="cart-modal">
+        <div class="modal cart-modal">
+            <div class="modal-header">
+                <h3>Your Cart</h3>
+                <button class="modal-close" id="close-cart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items populated by JS -->
+            </div>
+            
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span class="total-price" id="cart-total">$0</span>
+                </div>
+                <button class="btn btn-primary btn-block" id="checkout-btn">
+                    Proceed to Checkout
+                </button>
+                <p class="cart-note">Shipping calculated at checkout • Free over $150</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== WISHLIST MODAL ==================== -->
+    <div class="modal-overlay" id="wishlist-modal">
+        <div class="modal wishlist-modal">
+            <div class="modal-header">
+                <h3>Your Wishlist</h3>
+                <button class="modal-close" id="close-wishlist">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="wishlist-items" id="wishlist-items">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="toast-message"></span>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
